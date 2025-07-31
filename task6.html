@@ -1,0 +1,1264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        body {}
+
+        nav {
+            background-color: #f9c265;
+            position: sticky;
+            padding: 0px 10px;
+            z-index: 1000;
+        }
+
+        nav .all-nav {
+            display: flex;
+            justify-content: space-between;
+            padding: 30px;
+        }
+
+        nav .nav-menu {
+            /* background-color: red; */
+            /* padding: 30px;*/
+            /* padding-top: 20px; */
+        }
+
+        nav .nav-menu ul {
+            display: flex;
+            /* background-color: black; */
+
+
+        }
+
+        nav .nav-menu ul li {}
+
+        nav .nav-menu ul li a {
+            display: inline-block;
+            padding-right: 30px;
+            color: black;
+
+        }
+
+        nav .nav-header {
+            padding-right: 20px;
+            /* padding-top: 20px; */
+
+        }
+
+        nav .nav-header ul {
+            display: flex;
+
+
+        }
+
+        nav .nav-header ul li {}
+
+        nav .nav-header ul li i {
+            padding-right: 5px;
+        }
+
+        nav .nav-header ul li p {}
+
+        nav .nav-action {
+            padding-right: 30px;
+        }
+
+        nav .nav-action ul {
+            display: flex;
+        }
+
+        nav .nav-action ul li {
+            padding-right: 15px;
+        }
+
+        nav .nav-action ul li a {
+
+            color: black;
+            padding: 10px 20px;
+            border-radius: 25px;
+        }
+
+        nav .nav-action ul li a#sing {
+            border: black 2px solid;
+            background-color: black;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+        }
+
+        header {
+            background-color: #f9c265;
+            padding: 80px 60px;
+        }
+
+        header .header-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        header .header-content .hero {
+            margin-left: 20px;
+            /* border: black 1px solid; */
+        }
+
+        header .header-content .hero h1 {
+            font-size: 60px;
+            font-weight: bold;
+            max-width: 400px;
+            line-height: 1.5;
+        }
+
+        header .header-content .hero h1 span {
+            border: 1px solid black;
+            background-color: black;
+            border-radius: 999px;
+            color: #f9c265;
+            padding: 5px 15px;
+
+        }
+
+        header .right-header {
+            /* border: black 1px solid; */
+            margin-right: 70px;
+            margin-top: 26px;
+        }
+
+        header .right-header p {
+            padding-bottom: 30px;
+            line-height: 1.4;
+            color: #825d18;
+        }
+
+        header .right-header a {
+            border: black 1px solid;
+            border-radius: 30px;
+            padding: 12px 24px;
+            color: black;
+
+        }
+
+        #enroll-button i {
+            margin-left: 8px;
+        }
+
+        header .hero-img {
+            display: flex;
+            justify-content: center;
+        }
+
+        header .hero-img img {}
+
+        main .header-stats {
+            background-color: white;
+            display: flex;
+            justify-content: space-evenly;
+            padding: 90px 0;
+        }
+
+        .header-stats h3 {
+            font-size: 34px;
+
+            margin-bottom: 5px;
+        }
+
+        .header-stats p {
+            font-size: 14px;
+            color: #888888;
+
+        }
+
+        main .header-stats .review-stat {}
+
+        main .header-stats .review-stat h3 {}
+
+        main .header-stats .review-stat p {}
+
+        main .header-stats .enrollment-stat {}
+
+        main .header-stats .enrollment-stat h3 {}
+
+        main .header-stats .enrollment-stat p {}
+
+        main .header-stats .learner-stat {}
+
+        main .header-stats .learner-stat h3 {}
+
+        main .header-stats .learner-stat p {}
+
+        main .header-stats .course-stat {}
+
+        main .header-stats .course-stat h3 {}
+
+        main .header-stats .course-stat p {}
+
+
+        main .Online-education-intro {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            background-color: #fdf6e4;
+            padding: 60px 20px;
+
+        }
+
+        main .Online-education-intro .education-illustration {}
+
+        main .Online-education-intro .education-illustration img {
+            margin-left: 170px;
+        }
+
+        main .Online-education-intro .education-text {
+            margin-right: 150px;
+            width: 650px;
+
+        }
+
+        main .Online-education-intro .education-text h2 {
+            font-size: 48px;
+            font-weight: bold;
+            line-height: 1.1;
+            margin-bottom: 20px;
+        }
+
+        main .Online-education-intro .education-text h2 span {
+            display: inline-block;
+            background-color: #f9c265;
+
+            color: black;
+
+            border: 1px solid black;
+
+            border-radius: 999px;
+            padding: 0px 10px;
+        }
+
+        main .Online-education-intro .education-text p {
+            line-height: 1.4;
+            color: #888888;
+        }
+
+        main .features-section {
+            background-color: #fffefc;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+            margin-top: 80px;
+
+        }
+
+        main .features-section .features-header {
+            width: 60%;
+            background-color: #212529;
+            color: white;
+            padding: 40px;
+            border-radius: 25px;
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 30px;
+        }
+
+        main .features-section .features-header h2 {
+            font-size: 42px;
+            font-weight: bold;
+            line-height: 1.3;
+        }
+
+        main .features-section .features-header h2 span {
+
+            color: #f9c265;
+        }
+
+        main .features-section .features-header a {
+            background-color: #f9c265;
+            color: black;
+            padding: 12px 25px;
+            border-radius: 30px;
+            width: 26%;
+            margin-top: 42px;
+        }
+
+        main .features-section .certificate-feature {
+            width: 30%;
+            background-color: white;
+            padding: 40px;
+            border-radius: 15px;
+            border: 1px solid wheat;
+            margin-bottom: 40px;
+        }
+
+        main .features-section .certificate-feature .certificate-icon {}
+
+        main .features-section .certificate-feature .certificate-icon img {}
+
+        main .features-section .certificate-feature h3 {
+            font-size: 22px;
+            padding-top: 20px;
+        }
+
+        main .features-section .certificate-feature p {
+            padding-top: 20px;
+            color: #888888;
+            line-height: 1.4;
+
+        }
+
+        main .features-section .instructor-feature {
+            width: 30%;
+            background-color: white;
+            padding: 40px;
+            border-radius: 15px;
+            border: 1px solid wheat;
+        }
+
+        main .features-section .instructor-feature .instructor-icon {}
+
+        main .features-section .instructor-feature .instructor-icon img {}
+
+        main .features-section .instructor-feature h3 {
+            font-size: 22px;
+            padding-top: 20px;
+        }
+
+        main .features-section .instructor-feature p {
+            padding-top: 20px;
+            color: #888888;
+            line-height: 1.4;
+
+        }
+
+        main .features-section .support-feature {
+            width: 30%;
+            background-color: white;
+            padding: 40px;
+            border-radius: 15px;
+            border: 1px solid wheat;
+        }
+
+        main .features-section .support-feature .support-icon {}
+
+        main .features-section .support-feature .support-icon img {}
+
+        main .features-section .support-feature h3 {
+            font-size: 22px;
+            padding-top: 20px;
+        }
+
+        main .features-section .support-feature p {
+            padding-top: 20px;
+            color: #888888;
+            line-height: 1.4;
+
+        }
+
+        main .features-section .video-lesson {
+            width: 30%;
+            background-color: white;
+            padding: 40px;
+            border-radius: 15px;
+            border: 1px solid wheat;
+        }
+
+        main .features-section .video-lesson .video-lesson-icon {}
+
+        main .features-section .video-lesson .video-lesson-icon img {}
+
+        main .features-section .video-lesson h3 {
+            font-size: 22px;
+            padding-top: 20px;
+        }
+
+        main .features-section .video-lesson p {
+            padding-top: 20px;
+            color: #888888;
+            line-height: 1.4;
+        }
+
+        main .popular-courses-section {
+            margin-top: 70px;
+            background-color: #212529;
+            padding: 80px 50px;
+            text-align: center;
+        }
+
+        main .popular-courses-section h2 {
+            font-size: 42px;
+            color: white;
+            font-weight: bold;
+            margin-bottom: 60px;
+
+
+        }
+
+        main .popular-courses-section h2 span {
+            color: #f9c265;
+            border: 1px solid #f9c265;
+            border-radius: 999px;
+            padding: 0px 12px;
+        }
+
+        main .popular-courses-section .allthis {
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        main .popular-courses-section .course-card {
+            background-color: white;
+            border-radius: 20px;
+            padding: 20px;
+            width: 300px;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+        }
+
+        main .popular-courses-section .course-card .s1t-photo {}
+
+        main .popular-courses-section .course-card .s1t-photo img {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .course-meta {
+            display: flex;
+            justify-content: space-between;
+
+        }
+
+        main .popular-courses-section .course-card .some-left-icons {
+            display: flex;
+        }
+
+        main .popular-courses-section .course-card .some-left-icons i {
+            margin-right: 6px;
+        }
+
+        main .popular-courses-section .course-card .some-left-icons p {}
+
+        main .popular-courses-section .course-card .some-left-icons p span {
+            color: #888888;
+        }
+
+        main .popular-courses-section .course-card .some-right-icons {
+            display: flex;
+        }
+
+        main .popular-courses-section .course-card .some-right-icons i {
+            margin-right: 6px;
+        }
+
+        main .popular-courses-section .course-card .some-right-icons p {}
+
+        main .popular-courses-section .course-card h3 {
+            font-size: 20px;
+            font-weight: bold;
+            color: #212529;
+            line-height: 1.4;
+            margin-top: 15px;
+            margin-bottom: 20px;
+
+        }
+
+        main .popular-courses-section .course-card a {
+            color: black;
+            border: black 1px solid;
+            border-radius: 30px;
+            padding: 20px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        main .popular-courses-section .course-card-learn {
+            background-color: white;
+            border-radius: 20px;
+            padding: 20px;
+            width: 300px;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+        }
+
+        main .popular-courses-section .course-card-learn .n2d-photo {}
+
+        main .popular-courses-section .course-card-learn .n2d-photo img {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        main .popular-courses-section .course-card-learn .some-left-iconss {
+            display: flex;
+        }
+
+        main .popular-courses-section .course-card-learn .some-left-iconss i {}
+
+        main .popular-courses-section .course-card-learn .some-left-iconss p {}
+
+        main .popular-courses-section .course-card-learn .some-left-iconss p span {
+            color: #888888;
+        }
+
+        main .popular-courses-section .course-card-learn .some-right-iconss {
+            display: flex;
+        }
+
+        main .popular-courses-section .course-card-learn .some-right-iconss i {
+            margin-right: 6px;
+        }
+
+        main .popular-courses-section .course-card-learn .some-right-iconss p {}
+
+        main .popular-courses-section .course-card-learn h3 {
+            font-size: 20px;
+            font-weight: bold;
+            color: #212529;
+            line-height: 1.4;
+            margin-top: 15px;
+            margin-bottom: 20px;
+        }
+
+        main .popular-courses-section .course-card-learn a {
+            color: black;
+            border: black 1px solid;
+            border-radius: 30px;
+            padding: 20px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+
+        main .popular-courses-section .course-card-learnn {
+            background-color: white;
+            border-radius: 20px;
+            padding: 20px;
+            width: 300px;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+        }
+
+        main .popular-courses-section .course-card-learnn .r3d-photo {}
+
+        main .popular-courses-section .course-card-learnn .r3d-photo img {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        main .popular-courses-section .course-card-learnn .some-left-iconsss {
+            display: flex;
+        }
+
+        main .popular-courses-section .course-card-learnn .some-left-iconsss i {}
+
+        main .popular-courses-section .course-card-learnn .some-left-iconsss p {}
+
+        main .popular-courses-section .course-card-learnn .some-left-iconsss p span {
+            color: #888888;
+        }
+
+        main .popular-courses-section .course-card-learnn .some-right-iconsss {
+            display: flex;
+        }
+
+        main .popular-courses-section .course-card-learnn .some-right-iconsss i {
+            margin-right: 6px;
+        }
+
+        main .popular-courses-section .course-card-learnn .some-right-iconsss p {}
+
+        main .popular-courses-section .course-card-learnn h3 {
+            font-size: 20px;
+            font-weight: bold;
+            color: #212529;
+            line-height: 1.4;
+            margin-top: 15px;
+            margin-bottom: 20px;
+        }
+
+        main .popular-courses-section .course-card-learnn a {
+            color: black;
+            border: black 1px solid;
+            border-radius: 30px;
+            padding: 20px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        main .how-it-works-section {
+            background-color: white;
+            display: flex;
+            justify-content: space-between;
+
+
+        }
+
+        main .how-it-works-section .how-it-works-content {
+            flex-direction: column;
+            padding: 80px;
+            margin-right: 200px;
+        }
+
+        main .how-it-works-section .how-it-works-content h2 {
+            font-size: 48px;
+            font-weight: bold;
+            line-height: 1.3;
+            margin-bottom: 25px;
+        }
+
+        main .how-it-works-section .how-it-works-content h2 span {
+            border: black 1px solid;
+            border-radius: 999px;
+            background-color: #f9c265;
+            padding: 5px 13px;
+            font-style: italic;
+        }
+
+        main .how-it-works-section .how-it-works-content>p {
+            font-size: 16px;
+            line-height: 1.7;
+            color: #888888;
+            margin-bottom: 40px;
+        }
+
+        main .how-it-works-section .how-it-works-content .steps-container {
+            display: flex;
+            flex-direction: column;
+
+        }
+
+        main .how-it-works-section .how-it-works-content .steps-container .step-item {
+            display: flex;
+            padding-bottom: 15px;
+        }
+
+        main .how-it-works-section .how-it-works-content .steps-container .step-item i {
+
+            background-color: #f9c265;
+            color: black;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+        }
+
+        main .how-it-works-section .how-it-works-content .steps-container .step-item p {
+            align-items: center;
+            display: flex;
+            justify-content: center;
+        }
+
+        main .how-it-works-section .how-it-works-image-container {
+            margin-top: 33px;
+        }
+
+        main .how-it-works-section .how-it-works-image-container .img {}
+
+        .floating-cta-wrapper {
+            position: relative;
+            margin-top: 150px;
+        }
+
+        main .call-to-action-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f9c265;
+            border: #f9c265 1px solid;
+            border-radius: 30px;
+            max-width: 1100px;
+            margin: 100px auto;
+        }
+
+        main .call-to-action-section img {
+            padding-right: 60px;
+        }
+
+        main .call-to-action-section .cta-content {}
+
+        main .call-to-action-section .cta-content h2 {
+            font-size: 42px;
+            font-weight: bold;
+            color: black;
+            margin-bottom: 20px;
+        }
+
+        main .call-to-action-section .cta-content p {
+            color: #888888;
+            margin-bottom: 20px;
+        }
+
+        main .call-to-action-section .cta-content a {
+            display: inline-block;
+            border: black solid 1px;
+            color: #f9c265;
+            padding: 14px 30px;
+            border-radius: 30px;
+            background-color: black;
+        }
+
+        main .mobile-app-cta-section {
+            background-color: #fdf6e4;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 220px;
+        }
+
+        main .mobile-app-cta-section h2 {
+            margin-top: 30px;
+            font-size: 42px;
+            font-weight: bold;
+            margin-bottom: 40px;
+        }
+
+        main .mobile-app-cta-section h2 span {
+            display: inline-block;
+            background-color: #f9c265;
+            border: 2px solid black;
+            border-radius: 999px;
+            padding: 2px 10px;
+            font-style: italic;
+        }
+
+
+        main .mobile-app-cta-section .app-download-links {}
+
+        main .mobile-app-cta-section .app-download-links a {
+            border: black 2px solid;
+            background-color: black;
+            color: white;
+            padding: 15px;
+        }
+
+        main .mobile-app-cta-section .app-download-links a#app-store-link {}
+
+        main .mobile-app-cta-section .app-download-links a#apple-store-link {}
+
+        footer {
+            background-color: #fdf6e4;
+            padding: 100px 50px;
+        }
+
+        footer .allfoot {
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            background-color: #212529;
+            color: white;
+            border-radius: 30px;
+            padding: 80px 80px 120px 80px;
+        }
+
+
+        footer .allfoot .footer-left-side {}
+
+        footer .allfoot .footer-left-side i {
+            font-size: 24px;
+            color: #f9c265;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+
+
+        footer .allfoot .footer-left-side h4 {
+            font-size: 22px;
+            display: inline-block;
+            margin-left: 10px;
+        }
+
+        footer .allfoot .footer-left-side p {
+            color: #888888;
+            line-height: 1.7;
+        }
+
+        footer .allfoot .footer-left-side p#footer-copyright {
+            left: 80px;
+            bottom: 30px;
+            position: absolute;
+        }
+
+        footer .allfoot .footer-links-group {}
+
+        footer .allfoot .footer-links-group ul {}
+
+        footer .allfoot .footer-links-group ul li {
+            padding-bottom: 20px;
+        }
+
+        footer .allfoot .footer-links-group ul li h5 {}
+
+        footer .allfoot .footer-links-group ul li a {
+            color: #888888;
+        }
+
+        footer .allfoot .footer-resources {}
+
+        footer .allfoot .footer-resources ul {}
+
+        footer .allfoot .footer-resources ul li {
+            padding-bottom: 20px;
+        }
+
+        footer .allfoot .footer-resources ul li h5 {}
+
+        footer .allfoot .footer-resources ul li a {
+            color: #888888;
+        }
+
+        footer .allfoot .footer-links-groupp {}
+
+        footer .allfoot .footer-links-groupp ul {}
+
+        footer .allfoot .footer-links-groupp ul li {
+            padding-bottom: 20px;
+        }
+
+        footer .allfoot .footer-links-groupp ul li h5 {}
+
+        footer .allfoot .footer-links-groupp ul li a {
+            color: #888888;
+        }
+
+        footer .allfoot .footer-links-groupp p {
+            color: #888888;
+            right: 80px;
+            bottom: 30px;
+            position: absolute;
+        }
+
+        /* media query */
+        @media (max-width: 870px) {
+            header {
+                padding: 60px 30px;
+                text-align: center;
+            }
+
+            header .header-content {
+                flex-direction: column;
+                align-items: center;
+                gap: 40px;
+            }
+
+            header .right-header {
+                margin: 0;
+            }
+
+            header .hero-img {
+                margin-top: 30px;
+            }
+
+            main .header-stats {
+                flex-direction: column;
+                gap: 40px;
+                text-align: center;
+            }
+
+            main .Online-education-intro {
+                flex-direction: column;
+                gap: 40px;
+                text-align: center;
+            }
+
+            main .Online-education-intro .education-illustration img {
+                margin: 0;
+            }
+
+            main .Online-education-intro .education-text {
+                margin: 0;
+                width: 90%;
+
+            }
+
+            main .features-section {
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+                padding: 0 20px;
+            }
+
+            main .features-section .features-header,
+            main .features-section .certificate-feature,
+            main .features-section .instructor-feature,
+            main .features-section .support-feature,
+            main .features-section .video-lesson {
+                width: 80%;
+            }
+
+            main .features-section .features-header a {
+                width: 60%;
+            }
+
+            main .popular-courses-section .allthis {
+                flex-direction: column;
+                align-items: center;
+                gap: 30px;
+            }
+
+            main .how-it-works-section {
+                flex-direction: column;
+                align-items: center;
+                padding: 40px 20px;
+            }
+
+            main .how-it-works-section .how-it-works-content {
+                margin-right: 0;
+                padding: 40px 20px;
+            }
+
+        }
+
+
+        @media (max-width: 845px) {
+            footer .allfoot {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                gap: 20px;
+            }
+
+            #footer-copyright,
+            #footer-terms-privacy {
+                margin-top: 20px;
+            }
+
+            footer .allfoot .footer-left-side p#footer-copyright {
+                position: static;
+            }
+
+            footer .allfoot .footer-links-groupp p {
+                position: static;
+                margin-top: 10px;
+            }
+        }
+
+        @media (max-width: 635px) {
+            nav .all-nav {
+                flex-direction: column;
+                align-items: center;
+                gap: 40px;
+
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="all-nav">
+            <div class="nav-menu">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Course</a></li>
+                </ul>
+            </div>
+
+            <div class="nav-header">
+                <ul>
+                    <li><i class="fa-solid fa-circle-notch"></i></li>
+                    <li>
+                        <p>MONAC</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="nav-action">
+                <ul>
+                    <li><a href="#">Login</a></li>
+                    <li><a href="#" id="sing">Sign up</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header>
+        <div class="header-content">
+            <div class="hero">
+                <h1>Improve your <span>Skills</span> Faster</h1>
+            </div>
+            <div class="right-header">
+                <p>Speed up the skill acquisition process by <br>finding unlimited courses that
+                    matches <br>
+                    your niche.</p>
+                <a href="#"> Enroll now <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </div>
+        <div class="hero-img">
+            <img src="./images/8.png" width="40%">
+        </div>
+    </header>
+
+
+    <main>
+        <section class="header-stats">
+            <div class="review-stat">
+                <h3>4.5</h3>
+                <p>80k Reviews</p>
+            </div>
+            <div class="enrollment-stat">
+                <h3>30M</h3>
+                <p>Enrollments</p>
+            </div>
+            <div class="learner-stat">
+                <h3>2M+</h3>
+                <p>Learners</p>
+            </div>
+            <div class="course-stat">
+                <h3>1k+</h3>
+                <p>Popular courses</p>
+            </div>
+        </section>
+
+
+
+        <section class="Online-education-intro">
+            <div class="education-illustration">
+                <img src="./images/9.png" width="50%" alt="">
+            </div>
+            <div class="education-text">
+                <h2 id="about-us-title">We Provide <br><span>Smart</span> Online <br>Education</h2>
+                <p id="about-us-description">Our Courses Come With Assigned Projects, <br> Direct Interactions With
+                    Mentors, Relevant <br> Resources, And Tools That Help You Dive <br> Into In-Depth Learning From
+                    Anywhere.</p>
+            </div>
+        </section>
+
+
+
+
+
+        <section class="features-section">
+            <div class="features-header">
+                <h2 id="features-title">Our <span>features</span> <br> Special For you </h2>
+                <a id="view-all-features-link" href="#"> see all fueatres <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+            <div class="certificate-feature">
+                <div class="certificate-icon">
+                    <img src="./images/3.png" width="30%" alt="">
+                </div>
+                <h3 id="feature-title-cer">Get Certificate</h3>
+                <p id="feature-description-cer">
+                    Add Value To Your Certificates And <br>Increase Your Chances of Getting <br> Hired In Your Dream
+                    Job.</p>
+            </div>
+            <div class="instructor-feature">
+                <div class="instructor-icon">
+                    <img src="./images/4.png" width="30%" alt="">
+                </div>
+                <h3 id="feature-title-inst">Amazing Instructor</h3>
+                <p id="feature-description-inst">Our Amazing Instructors Bring <br> Experience, Knowledge And Fun
+                    <br>
+                    On The Table
+                </p>
+            </div>
+            <div class="support-feature">
+                <div class="support-icon">
+                    <img src="./images/5.png" width="30%" alt="">
+                </div>
+                <h3 id="feature-title">Life Time Support</h3>
+                <p id="feature-description-supp">You Will Have Life Times Access <br>
+                    Of The Courses & Resources. Also <br> Contacting Instructors Any Time!</p>
+            </div>
+            <div class="video-lesson">
+                <div class="video-lesson-icon">
+                    <img src="./images/6.png" width="30%" alt="">
+                </div>
+                <h3 id="feature-title-vid">Video Lesson</h3>
+                <p id="feature-description-vid">Recorded Version Of Lectures <br> From Professional Instructions
+                    <br>
+                    To Boost Your Growth.
+                </p>
+            </div>
+        </section>
+
+
+
+        <section class="popular-courses-section">
+            <h2 id="popular-courses-title">Popular &nbsp;<span id="cour">Courses</span> </h2>
+            <div class="allthis">
+                <div class="course-card">
+                    <div class="s1t-photo">
+                        <img src="./images/7.png" width="30%" alt="">
+                    </div>
+
+                    <div class="course-meta">
+                        <div class="some-left-icons">
+                            <i class="fa-solid fa-star"></i>
+                            <p>4.9 <span>(430 Reviews)</span></p>
+                        </div>
+                        <div class="some-right-icons">
+                            <i class="fa-solid fa-clock"></i>
+                            <p>02:33:55</p>
+                        </div>
+                    </div>
+                    <h3 class="course-title">Learn English: Beginning Grammer</h3>
+                    <a class="course-link" href="View Courses">View Courses</a>
+
+                </div>
+
+                <div class="course-card-learn">
+                    <div class="n2d-photo">
+                        <img src="./images/7.png" width="30%" alt="">
+                    </div>
+                    <div class="course-meta">
+                        <div class="some-left-iconss">
+                            <i class="fa-solid fa-star"></i>
+                            <p>4.9 <span>(430 Reviews)</span></p>
+                        </div>
+                        <div class="some-right-iconss">
+                            <i class="fa-solid fa-clock"></i>
+                            <p>02:33:55</p>
+                        </div>
+                    </div>
+                    <h3 class="course-title">Learn English: Beginning Grammer</h3>
+                    <a class="course-link" href="View Courses">View Courses</a>
+                </div>
+
+                <div class="course-card-learnn">
+                    <div class="r3d-photo">
+                        <img src="./images/7.png" width="30%" alt="">
+                    </div>
+                    <div class="course-meta">
+                        <div class="some-left-iconsss">
+                            <i class="fa-solid fa-star"></i>
+                            <p>4.9 <span>(430 Reviews)</span></p>
+                        </div>
+                        <div class="some-right-iconsss">
+                            <i class="fa-solid fa-clock"></i>
+                            <p>02:33:55</p>
+                        </div>
+                    </div>
+                    <h3 class="course-title">Learn English: Beginning Grammer</h3>
+                    <a class="course-link" href="View Courses">View Courses</a>
+                </div>
+            </div>
+        </section>
+
+
+
+        <section class="how-it-works-section">
+            <div class="how-it-works-content">
+                <h2>Its easy to Start
+                    <span>Learning</span>
+                </h2>
+                <p>
+                    Our Sign-In Process Lets You Start Your Learning Journey Without Much Hassle. Our Aim Is To Create A
+                    Great Learning Experience For You.
+                </p>
+
+                <div class="steps-container">
+                    <div class="step-item">
+                        <i class="fa-solid fa-check"></i>
+                        <p>Create Account</p>
+                    </div>
+                    <div class="step-item">
+                        <i class="fa-solid fa-check"></i>
+                        <p>Purchase Lessons</p>
+                    </div>
+                    <div class="step-item">
+                        <i class="fa-solid fa-check"></i>
+                        <p>Start Learning</p>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="how-it-works-image-container">
+                <img src="./images/10.png" width="70%" alt="Illustration of learning on a mobile phone">
+            </div>
+        </section>
+
+
+        <div class="floating-cta-wrapper">
+            <section class="call-to-action-section">
+                <img src="./images/11.png" width="40%" alt="">
+                <div class="cta-content">
+                    <h2>Get Ready To Start</h2>
+                    <p>
+                        After A Good Dinner One Can Forgive Anybody,<br>
+                        Even One's Own Relations.</p>
+                    <a href="Order now">Order Now <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </section>
+
+            <section class="mobile-app-cta-section">
+                <h2 id="mobile-app-title">Try Learning Free <br> &nbsp; on <span>Mobile App</span> </h2>
+                <div class="app-download-links">
+                    <a id="app-store-link" href="#"><i class="fa-brands fa-google-play"></i> Google play</a>
+                    <a id="apple-store-link" href="#  "><i class="fab fa-app-store"></i> App Strore</a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="allfoot">
+            <div class="footer-left-side">
+                <i class="fa-solid fa-circle-notch"></i>
+                <h4 id="footer-brand-name">MonaC</h4>
+                <p>Speed up the skill acquisition process by <br>finding unlimited courses that
+                    matches your
+                    <br>niche.
+                </p>
+                <p id="footer-copyright"> &copy; Musemind 2022 | All rights reserved.</p>
+            </div>
+            <div class="footer-links-group">
+                <ul>
+                    <li>
+                        <h5>Company</h5>
+                    </li>
+                    <li> <a href="About us">About us</a></li>
+                    <li><a href="Careers">Careers</a></li>
+                    <li><a href="press kit">press kit</a></li>
+                </ul>
+            </div>
+            <div class="footer-resources">
+                <ul>
+                    <li>
+                        <h5>Resorces</h5>
+                    </li>
+                    <li><a href="Blog">Blog</a></li>
+                    <li><a href="Help Center">Help Center</a></li>
+                    <li><a href="UX Research Guide">UX Research Guide</a></li>
+                </ul>
+            </div>
+            <div class="footer-links-groupp">
+                <ul>
+                    <li>
+                        <h5>Product</h5>
+                    </li>
+                    <li><a href="Pricing">Pricing</a></li>
+                    <li><a href="Enterprise">Enterprise</a></li>
+                    <li><a href="Integrate">Integrate</a></li>
+                </ul>
+                <p id="footer-terms-privacy">Terms & Privacy Policy</p>
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>
