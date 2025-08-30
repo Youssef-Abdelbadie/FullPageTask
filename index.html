@@ -13,6 +13,21 @@
             padding: 0px;
         }
 
+        :root {
+            --color-primary: #f9c265;
+            --color-background: #fdf6e4;
+            --color-surface: #ffffff;
+            --color-text-main: #212529;
+            --color-text-secondary: #888888;
+            --color-border: wheat;
+            --color-new: #825d18;
+            --color-ss: black;
+        }
+
+        main {
+            background-color: var(--color-surface);
+        }
+
         a {
             text-decoration: none;
         }
@@ -24,7 +39,7 @@
         body {}
 
         nav {
-            background-color: #f9c265;
+            background-color: var(--color-primary);
             position: sticky;
             padding: 0px 10px;
             z-index: 1000;
@@ -54,7 +69,7 @@
         nav .nav-menu ul li a {
             display: inline-block;
             padding-right: 30px;
-            color: black;
+            color: var(--color-text-main);
 
         }
 
@@ -73,10 +88,14 @@
         nav .nav-header ul li {}
 
         nav .nav-header ul li i {
+            color: var(--color-text-main);
             padding-right: 5px;
         }
 
-        nav .nav-header ul li p {}
+        nav .nav-header ul li p {
+            color: var(--color-text-main);
+
+        }
 
         nav .nav-action {
             padding-right: 30px;
@@ -92,21 +111,21 @@
 
         nav .nav-action ul li a {
 
-            color: black;
+            color: var(--color-text-main);
             padding: 10px 20px;
             border-radius: 25px;
         }
 
         nav .nav-action ul li a#sing {
-            border: black 2px solid;
-            background-color: black;
-            color: white;
+            border: var(--color-text-main) 2px solid;
+            background-color: var(--color-text-main);
+            color: var(--color-surface);
             padding: 10px 20px;
             border-radius: 25px;
         }
 
         header {
-            background-color: #f9c265;
+            background-color: var(--color-primary);
             padding: 80px 60px;
         }
 
@@ -126,13 +145,14 @@
             font-weight: bold;
             max-width: 400px;
             line-height: 1.5;
+            color: var(--color-text-main);
         }
 
         header .header-content .hero h1 span {
-            border: 1px solid black;
-            background-color: black;
+            border: 1px solid var(--color-text-main);
+            background-color: var(--color-text-main);
             border-radius: 999px;
-            color: #f9c265;
+            color: var(--color-primary);
             padding: 5px 15px;
 
         }
@@ -146,14 +166,14 @@
         header .right-header p {
             padding-bottom: 30px;
             line-height: 1.4;
-            color: #825d18;
+            color: var(--color-new);
         }
 
         header .right-header a {
-            border: black 1px solid;
+            border: var(--color-text-main) 1px solid;
             border-radius: 30px;
             padding: 12px 24px;
-            color: black;
+            color: var(--color-text-main);
 
         }
 
@@ -169,7 +189,7 @@
         header .hero-img img {}
 
         main .header-stats {
-            background-color: white;
+            background-color: var(--color-surface);
             display: flex;
             justify-content: space-evenly;
             padding: 90px 0;
@@ -183,31 +203,42 @@
 
         .header-stats p {
             font-size: 14px;
-            color: #888888;
+            color: var(--color-text-secondary);
 
         }
 
         main .header-stats .review-stat {}
 
-        main .header-stats .review-stat h3 {}
+        main .header-stats .review-stat h3 {
+            color: var(--color-text-main);
+        }
 
         main .header-stats .review-stat p {}
 
         main .header-stats .enrollment-stat {}
 
-        main .header-stats .enrollment-stat h3 {}
+        main .header-stats .enrollment-stat h3 {
+            color: var(--color-text-main);
+
+        }
 
         main .header-stats .enrollment-stat p {}
 
         main .header-stats .learner-stat {}
 
-        main .header-stats .learner-stat h3 {}
+        main .header-stats .learner-stat h3 {
+            color: var(--color-text-main);
+
+        }
 
         main .header-stats .learner-stat p {}
 
         main .header-stats .course-stat {}
 
-        main .header-stats .course-stat h3 {}
+        main .header-stats .course-stat h3 {
+            color: var(--color-text-main);
+
+        }
 
         main .header-stats .course-stat p {}
 
@@ -216,7 +247,7 @@
             display: flex;
             justify-content: flex-end;
             align-items: center;
-            background-color: #fdf6e4;
+            background-color: var(--color-background);
             padding: 60px 20px;
 
         }
@@ -238,27 +269,25 @@
             font-weight: bold;
             line-height: 1.1;
             margin-bottom: 20px;
+            color: var(--color-text-main);
         }
 
         main .Online-education-intro .education-text h2 span {
             display: inline-block;
-            background-color: #f9c265;
-
-            color: black;
-
-            border: 1px solid black;
-
+            background-color: var(--color-primary);
+            color: var(--color-text-main);
+            border: 1px solid var(--color-text-main);
             border-radius: 999px;
             padding: 0px 10px;
         }
 
         main .Online-education-intro .education-text p {
             line-height: 1.4;
-            color: #888888;
+            color: var(--color-text-secondary);
         }
 
         main .features-section {
-            background-color: #fffefc;
+            background-color: var(--color-surface);
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
@@ -270,8 +299,8 @@
 
         main .features-section .features-header {
             width: 60%;
-            background-color: #212529;
-            color: white;
+            background-color: var(--color-ss);
+            color: var(--color-surface);
             padding: 40px;
             border-radius: 25px;
             display: flex;
@@ -283,6 +312,7 @@
             font-size: 42px;
             font-weight: bold;
             line-height: 1.3;
+            color: white;
         }
 
         main .features-section .features-header h2 span {
@@ -292,7 +322,7 @@
 
         main .features-section .features-header a {
             background-color: #f9c265;
-            color: black;
+            color: var(--color-text-main);
             padding: 12px 25px;
             border-radius: 30px;
             width: 26%;
@@ -301,10 +331,10 @@
 
         main .features-section .certificate-feature {
             width: 30%;
-            background-color: white;
+            background-color: var(--color-surface);
             padding: 40px;
             border-radius: 15px;
-            border: 1px solid wheat;
+            border: 1px solid var(--color-border);
             margin-bottom: 40px;
         }
 
@@ -315,21 +345,22 @@
         main .features-section .certificate-feature h3 {
             font-size: 22px;
             padding-top: 20px;
+            color: var(--color-text-main)
         }
 
         main .features-section .certificate-feature p {
             padding-top: 20px;
-            color: #888888;
+            color: var(--color-text-secondary);
             line-height: 1.4;
 
         }
 
         main .features-section .instructor-feature {
             width: 30%;
-            background-color: white;
+            background-color: var(--color-surface);
             padding: 40px;
             border-radius: 15px;
-            border: 1px solid wheat;
+            border: 1px solid var(--color-border);
         }
 
         main .features-section .instructor-feature .instructor-icon {}
@@ -339,21 +370,22 @@
         main .features-section .instructor-feature h3 {
             font-size: 22px;
             padding-top: 20px;
+            color: var(--color-text-main)
         }
 
         main .features-section .instructor-feature p {
             padding-top: 20px;
-            color: #888888;
+            color: var(--color-text-secondary);
             line-height: 1.4;
 
         }
 
         main .features-section .support-feature {
             width: 30%;
-            background-color: white;
+            background-color: var(--color-surface);
             padding: 40px;
             border-radius: 15px;
-            border: 1px solid wheat;
+            border: 1px solid var(--color-border);
         }
 
         main .features-section .support-feature .support-icon {}
@@ -363,21 +395,22 @@
         main .features-section .support-feature h3 {
             font-size: 22px;
             padding-top: 20px;
+            color: var(--color-text-main)
         }
 
         main .features-section .support-feature p {
             padding-top: 20px;
-            color: #888888;
+            color: var(--color-text-secondary);
             line-height: 1.4;
 
         }
 
         main .features-section .video-lesson {
             width: 30%;
-            background-color: white;
+            background-color: var(--color-surface);
             padding: 40px;
             border-radius: 15px;
-            border: 1px solid wheat;
+            border: 1px solid var(--color-border);
         }
 
         main .features-section .video-lesson .video-lesson-icon {}
@@ -387,24 +420,25 @@
         main .features-section .video-lesson h3 {
             font-size: 22px;
             padding-top: 20px;
+            color: var(--color-text-main)
         }
 
         main .features-section .video-lesson p {
             padding-top: 20px;
-            color: #888888;
+            color: var(--color-text-secondary);
             line-height: 1.4;
         }
 
         main .popular-courses-section {
             margin-top: 70px;
-            background-color: #212529;
+            background-color: black;
             padding: 80px 50px;
             text-align: center;
         }
 
         main .popular-courses-section h2 {
             font-size: 42px;
-            color: white;
+            color: var(--color-surface);
             font-weight: bold;
             margin-bottom: 60px;
 
@@ -412,8 +446,8 @@
         }
 
         main .popular-courses-section h2 span {
-            color: #f9c265;
-            border: 1px solid #f9c265;
+            color: var(--color-primary);
+            border: 1px solid var(--color-primary);
             border-radius: 999px;
             padding: 0px 12px;
         }
@@ -424,7 +458,7 @@
         }
 
         main .popular-courses-section .course-card {
-            background-color: white;
+            background-color: var(--color-surface);
             border-radius: 20px;
             padding: 20px;
             width: 300px;
@@ -451,13 +485,18 @@
         }
 
         main .popular-courses-section .course-card .some-left-icons i {
+            color: var(--color-text-main);
+
             margin-right: 6px;
         }
 
-        main .popular-courses-section .course-card .some-left-icons p {}
+        main .popular-courses-section .course-card .some-left-icons p {
+            color: var(--color-text-main);
+
+        }
 
         main .popular-courses-section .course-card .some-left-icons p span {
-            color: #888888;
+            color: var(--color-text-secondary);
         }
 
         main .popular-courses-section .course-card .some-right-icons {
@@ -465,15 +504,20 @@
         }
 
         main .popular-courses-section .course-card .some-right-icons i {
+            color: var(--color-text-main);
+
             margin-right: 6px;
         }
 
-        main .popular-courses-section .course-card .some-right-icons p {}
+        main .popular-courses-section .course-card .some-right-icons p {
+            color: var(--color-text-main);
+
+        }
 
         main .popular-courses-section .course-card h3 {
             font-size: 20px;
             font-weight: bold;
-            color: #212529;
+            color: var(--color-text-main);
             line-height: 1.4;
             margin-top: 15px;
             margin-bottom: 20px;
@@ -481,8 +525,8 @@
         }
 
         main .popular-courses-section .course-card a {
-            color: black;
-            border: black 1px solid;
+            color: var(--color-text-main);
+            border: var(--color-text-main) 1px solid;
             border-radius: 30px;
             padding: 20px;
             text-align: center;
@@ -490,7 +534,7 @@
         }
 
         main .popular-courses-section .course-card-learn {
-            background-color: white;
+            background-color: var(--color-surface);
             border-radius: 20px;
             padding: 20px;
             width: 300px;
@@ -510,12 +554,18 @@
             display: flex;
         }
 
-        main .popular-courses-section .course-card-learn .some-left-iconss i {}
+        main .popular-courses-section .course-card-learn .some-left-iconss i {
+            color: var(--color-text-main);
 
-        main .popular-courses-section .course-card-learn .some-left-iconss p {}
+        }
+
+        main .popular-courses-section .course-card-learn .some-left-iconss p {
+            color: var(--color-text-main);
+
+        }
 
         main .popular-courses-section .course-card-learn .some-left-iconss p span {
-            color: #888888;
+            color: var(--color-text-secondary);
         }
 
         main .popular-courses-section .course-card-learn .some-right-iconss {
@@ -523,23 +573,28 @@
         }
 
         main .popular-courses-section .course-card-learn .some-right-iconss i {
+            color: var(--color-text-main);
+
             margin-right: 6px;
         }
 
-        main .popular-courses-section .course-card-learn .some-right-iconss p {}
+        main .popular-courses-section .course-card-learn .some-right-iconss p {
+            color: var(--color-text-main);
+
+        }
 
         main .popular-courses-section .course-card-learn h3 {
             font-size: 20px;
             font-weight: bold;
-            color: #212529;
+            color: var(--color-text-main);
             line-height: 1.4;
             margin-top: 15px;
             margin-bottom: 20px;
         }
 
         main .popular-courses-section .course-card-learn a {
-            color: black;
-            border: black 1px solid;
+            color: var(--color-text-main);
+            border: var(--color-text-main) 1px solid;
             border-radius: 30px;
             padding: 20px;
             text-align: center;
@@ -548,7 +603,7 @@
 
 
         main .popular-courses-section .course-card-learnn {
-            background-color: white;
+            background-color: var(--color-surface);
             border-radius: 20px;
             padding: 20px;
             width: 300px;
@@ -568,12 +623,18 @@
             display: flex;
         }
 
-        main .popular-courses-section .course-card-learnn .some-left-iconsss i {}
+        main .popular-courses-section .course-card-learnn .some-left-iconsss i {
+            color: var(--color-text-main);
 
-        main .popular-courses-section .course-card-learnn .some-left-iconsss p {}
+        }
+
+        main .popular-courses-section .course-card-learnn .some-left-iconsss p {
+            color: var(--color-text-main);
+
+        }
 
         main .popular-courses-section .course-card-learnn .some-left-iconsss p span {
-            color: #888888;
+            color: var(--color-text-secondary);
         }
 
         main .popular-courses-section .course-card-learnn .some-right-iconsss {
@@ -581,23 +642,26 @@
         }
 
         main .popular-courses-section .course-card-learnn .some-right-iconsss i {
+            color: var(--color-text-main);
             margin-right: 6px;
         }
 
-        main .popular-courses-section .course-card-learnn .some-right-iconsss p {}
+        main .popular-courses-section .course-card-learnn .some-right-iconsss p {
+            color: var(--color-text-main);
+        }
 
         main .popular-courses-section .course-card-learnn h3 {
             font-size: 20px;
             font-weight: bold;
-            color: #212529;
+            color: var(--color-text-main);
             line-height: 1.4;
             margin-top: 15px;
             margin-bottom: 20px;
         }
 
         main .popular-courses-section .course-card-learnn a {
-            color: black;
-            border: black 1px solid;
+            color: var(--color-text-main);
+            border: var(--color-text-main) 1px solid;
             border-radius: 30px;
             padding: 20px;
             text-align: center;
@@ -605,7 +669,7 @@
         }
 
         main .how-it-works-section {
-            background-color: white;
+            background-color: var(--color-surface);
             display: flex;
             justify-content: space-between;
 
@@ -623,12 +687,13 @@
             font-weight: bold;
             line-height: 1.3;
             margin-bottom: 25px;
+            color: var(--color-text-main);
         }
 
         main .how-it-works-section .how-it-works-content h2 span {
-            border: black 1px solid;
+            border: var(--color-text-main) 1px solid;
             border-radius: 999px;
-            background-color: #f9c265;
+            background-color: var(--color-primary);
             padding: 5px 13px;
             font-style: italic;
         }
@@ -636,7 +701,7 @@
         main .how-it-works-section .how-it-works-content>p {
             font-size: 16px;
             line-height: 1.7;
-            color: #888888;
+            color: var(--color-text-secondary);
             margin-bottom: 40px;
         }
 
@@ -653,8 +718,8 @@
 
         main .how-it-works-section .how-it-works-content .steps-container .step-item i {
 
-            background-color: #f9c265;
-            color: black;
+            background-color: var(--color-primary);
+            color: var(--color-text-main);
             width: 30px;
             height: 30px;
             border-radius: 50%;
@@ -668,6 +733,7 @@
             align-items: center;
             display: flex;
             justify-content: center;
+            color: var(--color-text-main);
         }
 
         main .how-it-works-section .how-it-works-image-container {
@@ -685,8 +751,8 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            background-color: #f9c265;
-            border: #f9c265 1px solid;
+            background-color: var(--color-primary);
+            border: var(--color-primary) 1px solid;
             border-radius: 30px;
             max-width: 1100px;
             margin: 100px auto;
@@ -701,26 +767,26 @@
         main .call-to-action-section .cta-content h2 {
             font-size: 42px;
             font-weight: bold;
-            color: black;
+            color: var(--color-text-main);
             margin-bottom: 20px;
         }
 
         main .call-to-action-section .cta-content p {
-            color: #888888;
+            color: var(--color-text-secondary);
             margin-bottom: 20px;
         }
 
         main .call-to-action-section .cta-content a {
             display: inline-block;
-            border: black solid 1px;
-            color: #f9c265;
+            border: var(--color-text-main) solid 1px;
+            color: var(--color-primary);
             padding: 14px 30px;
             border-radius: 30px;
-            background-color: black;
+            background-color: var(--color-text-main);
         }
 
         main .mobile-app-cta-section {
-            background-color: #fdf6e4;
+            background-color: var(--color-background);
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -728,6 +794,7 @@
         }
 
         main .mobile-app-cta-section h2 {
+            color: var(--color-text-main);
             margin-top: 30px;
             font-size: 42px;
             font-weight: bold;
@@ -737,7 +804,7 @@
         main .mobile-app-cta-section h2 span {
             display: inline-block;
             background-color: #f9c265;
-            border: 2px solid black;
+            border: 2px solid var(--color-text-main);
             border-radius: 999px;
             padding: 2px 10px;
             font-style: italic;
@@ -747,9 +814,9 @@
         main .mobile-app-cta-section .app-download-links {}
 
         main .mobile-app-cta-section .app-download-links a {
-            border: black 2px solid;
-            background-color: black;
-            color: white;
+            border: var(--color-text-main) 2px solid;
+            background-color: var(--color-text-main);
+            color: var(--color-surface);
             padding: 15px;
         }
 
@@ -758,7 +825,7 @@
         main .mobile-app-cta-section .app-download-links a#apple-store-link {}
 
         footer {
-            background-color: #fdf6e4;
+            background-color: var(--color-background);
             padding: 100px 50px;
         }
 
@@ -766,7 +833,7 @@
             position: relative;
             display: flex;
             justify-content: space-between;
-            background-color: #212529;
+            background-color: black;
             color: white;
             border-radius: 30px;
             padding: 80px 80px 120px 80px;
@@ -777,7 +844,7 @@
 
         footer .allfoot .footer-left-side i {
             font-size: 24px;
-            color: #f9c265;
+            color: var(--color-primary);
             margin-bottom: 20px;
             display: inline-block;
         }
@@ -790,7 +857,7 @@
         }
 
         footer .allfoot .footer-left-side p {
-            color: #888888;
+            color: var(--color-text-secondary);
             line-height: 1.7;
         }
 
@@ -811,7 +878,7 @@
         footer .allfoot .footer-links-group ul li h5 {}
 
         footer .allfoot .footer-links-group ul li a {
-            color: #888888;
+            color: var(--color-text-secondary);
         }
 
         footer .allfoot .footer-resources {}
@@ -825,7 +892,7 @@
         footer .allfoot .footer-resources ul li h5 {}
 
         footer .allfoot .footer-resources ul li a {
-            color: #888888;
+            color: var(--color-text-secondary);
         }
 
         footer .allfoot .footer-links-groupp {}
@@ -839,11 +906,11 @@
         footer .allfoot .footer-links-groupp ul li h5 {}
 
         footer .allfoot .footer-links-groupp ul li a {
-            color: #888888;
+            color: var(--color-text-secondary);
         }
 
         footer .allfoot .footer-links-groupp p {
-            color: #888888;
+            color: var(--color-text-secondary);
             right: 80px;
             bottom: 30px;
             position: absolute;
@@ -962,13 +1029,107 @@
 
             }
         }
+
+        /*  */
+        .nav-actions-group {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        #darkModeToggle {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 20px;
+            color: var(--color-text-main);
+        }
+
+        /*  */
+        .settings-toggler {
+            position: fixed;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+            background-color: var(--color-primary);
+            color: white;
+            border: none;
+            padding: 15px 10px;
+            border-top-left-radius: 15px;
+            border-bottom-left-radius: 15px;
+            cursor: pointer;
+            font-size: 20px;
+        }
+
+        .settings-panel {
+            position: fixed;
+            top: 0;
+            right: -300px;
+            width: 300px;
+            height: 100%;
+            background-color: var(--color-surface);
+            box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+            z-index: 1002;
+            padding: 20px;
+            transition: right 0.4s ease-in-out;
+        }
+
+        .settings-panel.open {
+            right: 0;
+
+        }
+
+        .settings-panel .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            background: none;
+            border: none;
+            font-size: 30px;
+            cursor: pointer;
+            color: var(--color-text-secondary);
+        }
+
+        .settings-panel h4 {
+            margin-bottom: 20px;
+            font-size: 18px;
+            color: var(--color-text-main);
+        }
+
+        .settings-panel .color-options {
+            display: flex;
+            gap: 15px;
+        }
+
+        .settings-panel .color-box {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            border: 3px solid var(--color-surface);
+        }
     </style>
 </head>
 
 <body>
+    <div class="settings-panel" id="settingsPanel">
+        <button class="close-btn" id="closeSettingsBtn">&times;</button>
+        <h4>Customize Color</h4>
+        <div class="color-options">
+            <span class="color-box" data-color="#f9c265" style="background-color: #f9c265;"></span>
+            <span class="color-box" data-color="#3498db" style="background-color: #3498db;"></span>
+            <span class="color-box" data-color="#e74c3c" style="background-color: #e74c3c;"></span>
+            <span class="color-box" data-color="#2ecc71" style="background-color: #2ecc71;"></span>
+            <span class="color-box" data-color="#9b59b6" style="background-color: #9b59b6;"></span>
+        </div>
+    </div>
+
+    <button class="settings-toggler" id="settingsToggler">
+        <i class="fa-solid fa-gear"></i>
+    </button>
     <nav>
         <div class="all-nav">
-            <div class="nav-menu">
+            <div class="nav-menu" id="navMenu">
                 <ul>
                     <li><a href="#">Home</a></li>
                     <li><a href="#">Blog</a></li>
@@ -984,12 +1145,19 @@
                     </li>
                 </ul>
             </div>
-            <div class="nav-action">
-                <ul>
-                    <li><a href="#">Login</a></li>
-                    <li><a href="#" id="sing">Sign up</a></li>
-                </ul>
+
+            <div class="nav-actions-group">
+                <div class="nav-action">
+                    <ul>
+                        <li><a href="#">Login</a></li>
+                        <li><a href="#" id="sing">Sign up</a></li>
+                    </ul>
+                </div>
+                <button id="darkModeToggle" title="Toggle Dark/Light Mode">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
             </div>
+
         </div>
     </nav>
     <header>
@@ -1043,10 +1211,6 @@
                     Anywhere.</p>
             </div>
         </section>
-
-
-
-
 
         <section class="features-section">
             <div class="features-header">
@@ -1257,7 +1421,54 @@
             </div>
         </div>
     </footer>
+    <script>
+        const darkModeButton = document.getElementById('darkModeToggle');
+        const rootElement = document.documentElement;
+        let isDarkMode = false;
 
+        darkModeButton.addEventListener('click', function () {
+            isDarkMode = !isDarkMode;
+            if (isDarkMode) {
+
+                rootElement.style.setProperty('--color-primary', '#000000');
+                rootElement.style.setProperty('--color-background', '#000000');
+                rootElement.style.setProperty('--color-surface', '#000000');
+                rootElement.style.setProperty('--color-text-main', '#ffffff');
+                darkModeButton.innerHTML = '<i class="fa-solid fa-sun"></i>';
+            } else {
+
+                rootElement.style.setProperty('--color-primary', '#f9c265');
+                rootElement.style.setProperty('--color-background', '#fdf6e4');
+                rootElement.style.setProperty('--color-surface', '#ffffff');
+                rootElement.style.setProperty('--color-text-main', '#212529');
+                darkModeButton.innerHTML = '<i class="fa-solid fa-moon"></i>';
+            }
+        });
+
+
+        const settingsToggler = document.getElementById('settingsToggler');
+        const settingsPanel = document.getElementById('settingsPanel');
+        const closeSettingsBtn = document.getElementById('closeSettingsBtn');
+        const colorBoxes = document.querySelectorAll('.color-box');
+
+
+        settingsToggler.addEventListener('click', function () {
+            settingsPanel.classList.add('open');
+        });
+
+
+        closeSettingsBtn.addEventListener('click', function () {
+            settingsPanel.classList.remove('open');
+        });
+
+
+        colorBoxes.forEach(box => {
+            box.addEventListener('click', function () {
+                const newColor = box.getAttribute('data-color');
+                rootElement.style.setProperty('--color-primary', newColor);
+            });
+        });
+    </script>
 
 </body>
 
