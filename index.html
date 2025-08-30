@@ -1050,13 +1050,10 @@
             position: fixed;
             top: 50%;
             right: 0;
-            transform: translateY(-50%);
             background-color: var(--color-primary);
             color: white;
             border: none;
             padding: 15px 10px;
-            border-top-left-radius: 15px;
-            border-bottom-left-radius: 15px;
             cursor: pointer;
             font-size: 20px;
         }
@@ -1068,7 +1065,6 @@
             width: 300px;
             height: 100%;
             background-color: var(--color-surface);
-            box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
             z-index: 1002;
             padding: 20px;
             transition: right 0.4s ease-in-out;
@@ -1462,12 +1458,12 @@
         });
 
 
-        colorBoxes.forEach(box => {
-            box.addEventListener('click', function () {
-                const newColor = box.getAttribute('data-color');
+        for (let i = 0; i < colorBoxes.length; i++) {
+            colorBoxes[i].addEventListener('click', function () {
+                const newColor = colorBoxes[i].getAttribute('data-color');
                 rootElement.style.setProperty('--color-primary', newColor);
             });
-        });
+        }
     </script>
 
 </body>
